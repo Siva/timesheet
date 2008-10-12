@@ -1,0 +1,97 @@
+8
+
+dir
+44
+svn://209.20.72.67/timesheet_repo/timesheet/trunk
+svn://209.20.72.67/timesheet_repo
+
+
+
+2008-09-04T05:02:57.240625Z
+44
+phani
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5cddb578-a236-416d-96c5-2fa5a7a20dac
+
+test
+dir
+
+app
+dir
+
+tmp
+dir
+
+log
+dir
+
+Rakefile
+file
+
+
+
+
+2008-08-30T04:01:02.000000Z
+17f2f134da4cd31ea095d5868ca89e86
+2008-08-26T02:35:45.549185Z
+1
+google
+
+Capfile
+file
+
+
+
+
+2008-09-02T03:04:37.000000Z
+b1e81a1f707bceac61fad971cc148fd6
+2008-09-02T03:42:34.335636Z
+36
+satish
+
+script
+dir
+
+config
+dir
+
+db
+dir
+
+doc
+dir
+
+lib
+dir
+
+vendor
+dir
+
+README
+file
+
+
+
+
+2008-08-30T04:01:02.000000Z
+0cdf56769f20a2b73a929ac3ba633152
+2008-08-26T02:35:45.549185Z
+1
+google
+
+public
+dir
+
