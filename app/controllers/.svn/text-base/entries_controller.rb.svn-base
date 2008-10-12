@@ -1,3 +1,0 @@
-class EntriesController < ApplicationController
-
-end

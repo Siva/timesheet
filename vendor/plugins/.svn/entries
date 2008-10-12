@@ -1,43 +1,0 @@
-8
-
-dir
-44
-svn://209.20.72.67/timesheet_repo/timesheet/trunk/vendor/plugins
-svn://209.20.72.67/timesheet_repo
-
-
-
-2008-09-01T08:06:53.457795Z
-31
-satish
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-5cddb578-a236-416d-96c5-2fa5a7a20dac
-
-shoulda
-dir
-
-restful-authentication
-dir
-
-restful_authentication
-dir
-
-factory_girl
-dir
-
-calendar_date_select
-dir
-
