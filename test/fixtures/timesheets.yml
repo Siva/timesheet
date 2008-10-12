@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  start_date: 2008-08-31
+  end_date: 2008-08-31
+  user_id: 1
+  status: false
+
+two:
+  start_date: 2008-08-31
+  end_date: 2008-08-31
+  user_id: 1
+  status: false

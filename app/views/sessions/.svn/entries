@@ -1,0 +1,40 @@
+8
+
+dir
+44
+svn://209.20.72.67/timesheet_repo/timesheet/trunk/app/views/sessions
+svn://209.20.72.67/timesheet_repo
+
+
+
+2008-08-30T21:57:00.366153Z
+6
+satish
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5cddb578-a236-416d-96c5-2fa5a7a20dac
+
+new.html.erb
+file
+
+
+
+
+2008-08-30T21:39:43.000000Z
+3f24d8fcb83e7ba317d68570d4f7de4d
+2008-08-30T21:57:00.366153Z
+6
+satish
+

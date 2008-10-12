@@ -1,0 +1,3 @@
+<% for timesheet in @timesheets %>
+  <p><%= link_to "#{timesheet.start_date} - #{timesheet.end_date}", user_timesheet_path(current_user.id, timesheet.id) %></p>
+<% end %>

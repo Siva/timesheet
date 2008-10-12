@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Timesheets-Online</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<%= stylesheet_link_tag 'main', :cache => true %>
+<%= javascript_include_tag :defaults, :cache => true %>
+<%= calendar_date_select_includes "blue" %>
+<%= yield :head %>
+</head>
+<body>
+<div id="header">
+	<h1>Timesheets-Online</h1>
+	<h2>timesheets made easy </h2>
+</div>
+<div id="menu">
+	<ul>
+		<li><a href="/" class="active">Home</a></li>
+		<li><a href="/signup">Register</a></li>
+		<li><a href="/login">Login</a></li>
+		<li><a href="/logout">Logout</a></li>
+		<li><a href="#">About Us</a></li>
+		<li><a href="#">Contact Us</a></li>
+	</ul>
+</div>
+<div id="content">
+        <div id="columnA">
+		<h2>Create and Save Timesheets</h2>
+                <div id="newtimesheet" style="display:none;">
+				<% if current_user %>
+                	<%= error_messages_for :timesheet %>
+                	<% form_for :timesheet, :url => new_timesheet_path do |f| -%>
+                        <%= f.label :start_date %><%= f.calendar_date_select :start_date, :size => 10 %><br/>
+                        <%= f.label :end_date %><%= f.calendar_date_select :end_date, :size => 10 %><br/>
+                        <%= f.hidden_field :user_id, { :value => current_user.id} %>
+                        <%= f.submit "create"%>
+                	<% end %>
+                <% end %>
+                </div>
+		<%= yield :layout %>
+	</div>
+	<div id="columnB">
+                <% if current_user %>
+		<h3>Welcome <%=current_user.login unless !current_user %></h3>
+		<ul class="list1">
+			<li><%= link_to "see your past timesheets", user_timesheets_path(current_user) %></li>
+			<li><%= link_to_function "create timesheets", "$('newtimesheet').show()" %></li>
+		</ul>
+                <% end %>
+	</div>
+</div>
+<div id="footer">
+	<p>Copyright &copy; 2008 Timesheets.com. </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+8
+
+dir
+44
+svn://209.20.72.67/timesheet_repo/timesheet/trunk/vendor/plugins/restful_authentication
+svn://209.20.72.67/timesheet_repo
+
+
+
+2008-08-30T00:05:45.059171Z
+2
+satish
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5cddb578-a236-416d-96c5-2fa5a7a20dac
+
+Rakefile
+file
+
+
+
+
+2008-08-30T04:01:01.000000Z
+ebfd713e05e35c55392c1999bf3bfb44
+2008-08-30T00:05:45.059171Z
+2
+satish
+
+lib
+dir
+
+install.rb
+file
+
+
+
+
+2008-08-30T04:01:01.000000Z
+3773dce53854a282602d79a631a1ff8a
+2008-08-30T00:05:45.059171Z
+2
+satish
+
+generators
+dir
+
+README
+file
+
+
+
+
+2008-08-30T04:01:01.000000Z
+55b3f6d8c8e815aaad6c508f9d3540e2
+2008-08-30T00:05:45.059171Z
+2
+satish
+

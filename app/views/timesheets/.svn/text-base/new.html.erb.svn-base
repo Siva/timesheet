@@ -1,0 +1,19 @@
+<%= error_messages_for :timesheet %>
+<% form_for :timesheet, :url => timesheets_path do |f| -%>
+    <%= f.hidden_field :start_date, {:value => @timesheet.start_date} %>
+    <%= f.hidden_field :end_date, {:value => @timesheet.end_date} %>
+	<%= f.hidden_field :user_id, {:value => current_user.id} %>
+	<% @timesheet.entries.each_with_index do |entry, index| %>
+    <% fields_for "timesheet[entry_attributes][]", entry do |entry_form| %>
+      <p>
+        Date: <%= entry_form.text_field :date, :value => @timesheet.start_date + index, :size => 10 %> ,
+        Hours: <%= entry_form.text_field :hours, :size => 10%>
+      </p>
+    <% end %>
+  <% end %>
+	<%= f.submit "create"%>
+<% end %>
+
+
+
+

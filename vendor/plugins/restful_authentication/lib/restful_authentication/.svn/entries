@@ -1,0 +1,40 @@
+8
+
+dir
+44
+svn://209.20.72.67/timesheet_repo/timesheet/trunk/vendor/plugins/restful_authentication/lib/restful_authentication
+svn://209.20.72.67/timesheet_repo
+
+
+
+2008-08-30T00:05:45.059171Z
+2
+satish
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5cddb578-a236-416d-96c5-2fa5a7a20dac
+
+rails_commands.rb
+file
+
+
+
+
+2008-08-30T04:01:01.000000Z
+f06c408a3734cdb4c5bd5d18a4cb498f
+2008-08-30T00:05:45.059171Z
+2
+satish
+
