@@ -1,52 +1,0 @@
-8
-
-dir
-44
-svn://209.20.72.67/timesheet_repo/timesheet/trunk/tmp
-svn://209.20.72.67/timesheet_repo
-
-
-
-2008-09-02T03:42:34.335636Z
-36
-satish
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-5cddb578-a236-416d-96c5-2fa5a7a20dac
-
-pids
-dir
-
-restart.txt
-file
-
-
-
-
-2008-09-02T02:59:15.000000Z
-d41d8cd98f00b204e9800998ecf8427e
-2008-09-02T03:42:34.335636Z
-36
-satish
-
-cache
-dir
-
-sessions
-dir
-
-sockets
-dir
-
