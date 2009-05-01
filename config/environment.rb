@@ -65,5 +65,8 @@ Rails::Initializer.run do |config|
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector
   config.gem "calendar_date_select"
+  config.gem "thoughtbot-factory_girl", :lib    => "factory_girl", :source => "http://gems.github.com"
+  config.gem "thoughtbot-shoulda", :lib => "shoulda", :source=> "http://gems.github.com"
+  
 end
 CalendarDateSelect.format = :american
