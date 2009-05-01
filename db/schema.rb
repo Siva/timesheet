@@ -13,8 +13,8 @@ ActiveRecord::Schema.define(:version => 20080901050604) do
 
   create_table "entries", :force => true do |t|
     t.date     "date"
-    t.integer  "hours",        :limit => 11
-    t.integer  "timesheet_id", :limit => 11
+    t.integer  "hours"
+    t.integer  "timesheet_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(:version => 20080901050604) do
   create_table "timesheets", :force => true do |t|
     t.date     "start_date"
     t.date     "end_date"
-    t.integer  "user_id",    :limit => 11
+    t.integer  "user_id"
     t.boolean  "status"
     t.datetime "created_at"
     t.datetime "updated_at"

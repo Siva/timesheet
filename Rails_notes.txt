@@ -1,0 +1,98 @@
+Automatic Class Reloading: 
+
+  In config/development.rb there is config.cache_classes set to false which enables 
+  automatic refresh of classes when even ever they changes
+  
+  # In the development environment your application's code is reloaded on
+  # every request.  This slows down response time but is perfect for development
+  # since you don't have to restart the webserver when you make code changes.
+  config.cache_classes = false
+  
+  Ruby require automatically caches the file and will not load second time, where as a load will always load
+
+ActionController
+
+Controller/View Communication:
+  Controller instance variables are copied over to instance of actionview::base(wierd ha, may be not)
+
+before_filter or after_filter
+  In contrast to the somewhat similar callback methods of ActiveRecord, you 
+can’t implement a filter method on a controller by adding a method named 
+before_filterorafter_filter.  Filter methods are macro-style, that is, they appear at the top 
+of your controller method, inside the class context, before method definitions.
+
+  -> before_filter, after_filter, around_filter all these three can take symbol, block or class as arguments.
+  -> a false return statement or render or redirect will cause the action to not execute
+  ->
+  
+Routes:
+
+  Note that Rails 2.0 introduces a mapper method named root which becomes the 
+  proper way to define the empty route for a Rails application, like this: 
+  map.root :controller => “homepage” 
+  
+Route reflection:
+
+  rs = ActionController::Routing::Routes 
+  You’ll see a rather huge amount of output—a screen dump of all the defined 
+  routes. You can, however, get this dump in a more readable form: 
+  >> puts rs.routes
+
+Active Record:
+
+  When you’re running a Rails server in development mode, changes to the database 
+  schema are reflected in the Active Record objects immediately, via the web browser. 
+  However, if you make changes to the schema while you have your Rails console run- 
+  ning, the changes will notbe reflected automatically, although it is possible to pick up 
+  changes manually by typing Dispatcher.reset_application!at the console.
+  
+  To rollback to a version use this
+  rake db:migrate VERSION=1
+
+  Different rake tasks available for db
+  
+  rake db:abort_if_pending_migrations  # Raises an error if there are pending...
+  rake db:charset                      # Retrieves the charset for the curren...
+  rake db:collation                    # Retrieves the collation for the curr...
+  rake db:create                       # Create the database defined in confi...
+  rake db:create:all                   # Create all the local databases defin...
+  rake db:drop                         # Drops the database for the current R...
+  rake db:drop:all                     # Drops all the local databases define...
+  rake db:fixtures:identify            # Search for a fixture given a LABEL o...
+  rake db:fixtures:load                # Load fixtures into the current envir...
+  rake db:migrate                      # Migrate the database through scripts...
+  rake db:migrate:down                 # Runs the "down" for a given migratio...
+  rake db:migrate:redo                 # Rollbacks the database one migration...
+  rake db:migrate:reset                # Resets your database using your migr...
+  rake db:migrate:up                   # Runs the "up" for a given migration ...
+  rake db:reset                        # Drops and recreates the database fro...
+  rake db:rollback                     # Rolls the schema back to the previou...
+  rake db:schema:dump                  # Create a db/schema.rb file that can ...
+  rake db:schema:load                  # Load a schema.rb file into the database
+  rake db:sessions:clear               # Clear the sessions table
+  rake db:sessions:create              # Creates a sessions migration for use...
+  rake db:structure:dump               # Dump the database structure to a SQL...
+  rake db:test:clone                   # Recreate the test database from the ...
+  rake db:test:clone_structure         # Recreate the test databases from the...
+  rake db:test:prepare                 # Prepare the test database and load t...
+  rake db:test:purge                   # Empty the test database
+  rake db:version                      # Retrieves the current schema version...
+
+# setting primary and table names
+  class Client < ActiveRecord::Base 
+    set_table_name “CLIENT” 
+    set_primary_key “CLIENT_ID” 
+  end
+  
+# Default Attributes
+  Migrations let you define default attribute values by passing a :defaultoption to the 
+  columnmethod, but most of the time you’ll want to set default attribute values at the 
+  model layer, not the database layer. Default values are part of your domain logic and 
+  should be kept together with the rest of the domain logic of your application, in the 
+  model layer. 
+  
+  ActiveRecord has a handy-dandy create class method that creates a new 
+  instance, persists it to the database, and returns it in one operation: 
+  
+  
+  

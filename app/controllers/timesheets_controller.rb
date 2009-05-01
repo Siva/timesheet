@@ -1,4 +1,6 @@
 class TimesheetsController < ApplicationController
+
+  #before_filter :login_required
   
   def new
     @timesheet = Timesheet.new(params[:timesheet])
