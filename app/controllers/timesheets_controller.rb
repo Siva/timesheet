@@ -14,7 +14,7 @@ class TimesheetsController < ApplicationController
   end
   
   def index
-    @timesheets = Timesheet.find_all_by_user_id(params[:user_id])
+    @timesheets = Timesheet.recent(params[:user_id])
   end
   
   def show

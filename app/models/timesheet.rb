@@ -13,5 +13,9 @@ class Timesheet < ActiveRecord::Base
       entries.build(attributes)
     end
   end
+
+  named_scope :recent, lambda { |user_id|
+  {:conditions => ["user_id = ?", user_id], :order => :start_date,:limit => 5} 
+  }
   
 end
